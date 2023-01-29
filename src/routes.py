@@ -1,13 +1,7 @@
-from fastapi import FastAPI
+from main import app
+from fastapi import APIRouter
 
 
-app = FastAPI(
-    docs="/docs",
-    redocs="/redoc",
-    version="0.1.0",
-    description="Projeto responsável por buscar cotações na internet",
-    title="Search Values"
-)
 
 @app.get("/health_check")
 async def health_check():
